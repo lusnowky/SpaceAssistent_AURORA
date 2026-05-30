@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+
+h1 {
+    font-family:            "Press Start 2P", sans-serif;
+    color:                  #8cffff;
+    text-align:             center;
+    font-size:              60px;
+    margin:                 20px 0;
+    position:               relative;
+    top:                    75px;
+    margin-bottom:          55px;
+}
+
+h4 {
+    font-family:            "Press Start 2P", sans-serif;
+    color:                  #8cffff;
+    text-align:             center;
+}
+
+h2 {
+    font-family:            "Press Start 2P", sans-serif;
+    font-size:              15px;
+    color:                  #8cffff;
+    text-align:             center;
+    margin-top:             60px;
+}
+
+body.monitor {
+    font-family:            "Press Start 2P", sans-serif;
+    color:                  #8cffff;
+    background-image:       url('img/screen.gif');
+    background-size:        cover;
+    background-position:    center;
+    background-repeat:      no-repeat;
+    background-attachment:  fixed;
+    margin:                 0;
+    padding:                20px;
+    text-align:             center;
+    margin-left:            350px;
+    margin-right:           350px;
+    margin-bottom:          200px;
+}
+
+input {
+    font-family:            "Pixelify Sans", sans-serif;
+    font-size:              16px;
+    padding:                10px;
+    margin:                 10px;
+    border:                 none;
+    border-radius:          5px;
+    width:                  160px;
+    text-align:             center;
+    position:               relative;
+    top:                    10px;
+    margin-top:             25px;
+}
+
+button {
+    font-family:            "Pixelify Sans", sans-serif;
+    padding:                10px 50px;
+    border-radius:          5px;
+    background:             transparent;
+    border:                 8px solid #8cffff;
+    color:                  #8cffff;
+    cursor:                 pointer;
+    margin-bottom:          30px;
+}
+
+.status_comunicacao input[type="checkbox"] {
+    display: none;
+}
+
+.status_comunicacao label {
+    display:                inline-block;
+    width:                  30px; 
+    height:                 30px;
+    cursor:     pointer;
+
+    background-image:       url('img/not_checked.png'); /* Imagem para comunicação instável */
+    background-size:        cover;
+    background-repeat:      no-repeat;
+
+    transition:             all 0.3s ease;
+}
+
+.status_comunicacao input[type="checkbox"]:checked + label {
+  background-image: url('img/checked.png'); 
+}
+
+.botoes {
+    display:                flex;
+    justify-content:        center;
+    gap:                    15px;
+    margin-top:             20px;
+}
+
+#saida {
+    margin-top:             20px;
+    font-size:              18px;
+    line-height:            2.5;
+}
+
+.historico-table {
+    font-family:            "Pixelify Sans", sans-serif;
+    font-size:              15px;
+    width:                  75%;
+    max-width:              800px;
+    margin:                 0 auto;
+    border-collapse:        collapse;
+    background:             transparent;
+    color:                  #8cffff;
+}
+
+.historico-table th,
+.historico-table td {
+    border:                 5px solid #8cffff;
+    padding:                10px;
+    text-align:             center;
+}
+
+.historico-table th {
+    background:             transparent;
+    color:                  #8cffff;
+}
+
+

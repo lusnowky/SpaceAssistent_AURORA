@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Mission Control AI</title>
+    
+</head>
+<body class="monitor">
+
+    <h1>Spaceship Monitor</h1> <br>
+    <h4>Gerenciamento do Funcionamento da Nave</h4> <br>
+
+    <h2>Sistema de Comunicação</h2>
+
+    <div class="status_comunicacao">
+        <input  type="checkbox" id="comunicacao" placeholder="Status da Comunicação">
+        <label  for="comunicacao"></label>
+    </div>
+
+    <input      type="number" id="temperatura" placeholder="Temperatura (°C)">
+    <input      type="number" id="energia" placeholder="Energia (%)"> <br>
+    
+    <div class ="botoes">
+    <button     onclick="iniciarAnalise()">Iniciar Análise</button>
+    <button     onclick="statusNave()">Ver Status</button>
+    <button     onclick="mostrarHistorico()">Mostrar Histórico</button>
+    </div>
+
+    <div id="saida"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
