@@ -24,13 +24,19 @@ h2 {
     font-size:              15px;
     color:                  #8cffff;
     text-align:             center;
-    margin-top:             60px;
+    margin-top:             40px;
+}
+
+hr {
+    border:                 2px solid #8cffff;
+    margin:                 30px auto;
+    width:                  100%;
 }
 
 body.monitor {
     font-family:            "Press Start 2P", sans-serif;
     color:                  #8cffff;
-    background-image:       url('img/screen.gif');
+    background-image:       url('img/computerScreen.gif');
     background-size:        cover;
     background-position:    center;
     background-repeat:      no-repeat;
@@ -38,9 +44,9 @@ body.monitor {
     margin:                 0;
     padding:                20px;
     text-align:             center;
-    margin-left:            350px;
-    margin-right:           350px;
-    margin-bottom:          200px;
+    margin-left:            280px;
+    margin-right:           280px;
+    margin-bottom:          125px;
 }
 
 input {

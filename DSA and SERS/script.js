@@ -4,9 +4,9 @@ let energia       =     document.getElementById("energia");          // variavel
 let sessoes       =     [];                                          // lista para armazenar as sessões
 let sessaoAtual   =     null;                                        // variavel para armazenar a sessão atual
 
-let tempValue = "";
-let callValue = "";
-let energiaValue = "";
+let tempStatus    =     "";
+let callStatus    =     "";
+let energiaStatus =     "";
 
 // Função para iniciar a recarga
 function iniciarAnalise() {
@@ -19,39 +19,44 @@ function iniciarAnalise() {
         saida.innerHTML =   "Por favor, preencha todos os campos.";
         return;
     } else {
-        saida.innerHTML =   "Análise iniciada!<br>";
+        saida.innerHTML =   "Análise iniciada!<br><br>";
     }
+
     if (temp.value > 80) {                                          // Verifica se a temperatura é superior a 80 graus
-        tempValue       =   "Alerta de Superaquecimento";
+        tempStatus       =   "Alerta de Superaquecimento!!!";
+        saida.innerHTML  +=  "Risco de Superaquecimento! Iniciando protocolos de resfriamento.<br>";
     } 
     else {
-        tempValue       =   "Temperatura Normal";
+        tempStatus       =   "Temperatura Normal";
     }
     if (call.checked == true) {                                     // Verifica se a comunicação está funcionando (checkbox marcado)
-        callValue       =   "Comunicação Estável";
+        callStatus       =   "Comunicação Estável";
     } 
     else {
-        callValue       =   "Falha na Comunicação";
+        callStatus       =   "Falha na Comunicação!!!";
+        saida.innerHTML  +=  "Falha na Comunicação! Sistema operando em modo autônomo de tomada de decisão.<br>";
     }
     if (energia.value < 20) {                                       // Verifica se o nível de energia é inferior a 20%
-        energiaValue    =   "Alerta de Baixa Energia";
+        energiaStatus    =   "Alerta de Baixa Energia!!!";
+        saida.innerHTML  +=  "Nível de energia Baixo! Iniciando economia de energia e otimizando o fluxo das baterias solares.<br>";
     }
     else {
-        energiaValue    =   "Nível de Energia Adequado";
+        energiaStatus    =   "Nível de Energia Adequado";
+    }
+
+    if (tempStatus === "Temperatura Normal" || callStatus === "Comunicação Estável" || energiaStatus === "Nível de Energia Adequado") {
+        saida.innerHTML  +=  "Todos os sistemas operando dentro dos parâmetros normais. Monitoramento contínuo em andamento.<br>";
     }
 
     sessaoAtual = {
-        temperatura:    tempValue,
-        energia:        energiaValue,
-        comunicacao:    callValue,
+        temperatura:    tempStatus,
+        energia:        energiaStatus,
+        comunicacao:    callStatus,
         data:           new Date().toLocaleString()                 // Registra a data e hora da sessão
     }
 
     sessoes.push(sessaoAtual);
     sessaoAtual = null;
-
-    document.getElementById("saida").innerHTML =                    // Exibe os detalhes da sessão atual
-        "Os dados inseridos foram analisados e regisitrados!<br>"
 }
 
 function statusNave() {
@@ -60,33 +65,21 @@ function statusNave() {
         return;
     }
     
-    if (tempValue === "Alerta de Superaquecimento" || callValue === "Falha na Comunicação" || energiaValue === "Alerta de Baixa Energia") {
-        saida.innerHTML = "Status da Nave: ALERTA<br>";
+    if (tempStatus === "Alerta de Superaquecimento!!!" || callStatus === "Falha na Comunicação!!!" || energiaStatus === "Alerta de Baixa Energia!!!") {
+        saida.innerHTML = "Status da Nave: ALERTA<br>" +
+                            "FALHA DETECTADA!<br><BR>" +
+                            tempStatus + "<br>" +
+                            callStatus + "<br>" +
+                            energiaStatus;
     }
     else {
         saida.innerHTML = "Status da Nave: Normal<br>" +
                             "Sem Falhas Detectadas<br><BR>" +
-                            tempValue + "<br>" +
-                            callValue + "<br>" +
-                            energiaValue;
+                            tempStatus + "<br>" +
+                            callStatus + "<br>" +
+                            energiaStatus;
     }
-
-    if (energiaValue === "Alerta de Baixa Energia") {
-        saida.innerHTML += "Baixa Energia: Iniciando economia de energia e otimizando o fluxo das baterias solares. <br>";
-    }
-
-    if (tempValue === "Alerta de Superaquecimento") {
-        saida.innerHTML += "Superaquecimento: Ativando sistema de resfriamento e reduzindo a carga dos sistemas não essenciais. <br>";
-    }
-
-    if (callValue === "Falha na Comunicação") {
-        saida.innerHTML += "Falha na Comunicação: Sistema operando em modo autônomo de tomada de decisão.<br>";
-    }
-
 }
-
-
-
 
 function mostrarHistorico() {
     let saida = document.getElementById("saida");
