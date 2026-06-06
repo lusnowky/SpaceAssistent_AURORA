@@ -4,7 +4,7 @@
 ---
 
 ## Apresentação
-A exploração espacial se tornou hoje um cenário muito possível para a humanidade, com os avanços da tecnologia, diversas empresas definiram um objeto em comum: explorar o espaço. E claro, para uma exploração segura é necessário um método de identificação de falhas críticas em uma espaçonave. A partir disso foi desenvolvido um site que simula um monitor de que verifica o status da nave, alertando a partir dos dados fornecidos pelo usuário falhas na nave ou não.
+A exploração espacial se tornou hoje um cenário muito possível para a humanidade, com os avanços da tecnologia, diversas empresas definiram um objeto em comum: explorar o espaço. E claro, para uma exploração segura é necessário um método de identificação de falhas críticas em uma espaçonave. A partir disso foram desenvolvidos diversos sistemas utilizando diferentes linguagens todos com um objetivo em comum: O monitoramento de módulos presentes em uma nave durante uma missão espacial.
 
 O site funciona como um verificador dos dados da nave que são informados pelo usuário através de dois campos de resposta (representando os valores de temperatura e energia) e uma checkbox, que se marcada representa um funcionamento do sistema de comunicação com a base e se não marcada, representa que os tripulantes da nave não conseguem entrar em contato com a nave.
 
