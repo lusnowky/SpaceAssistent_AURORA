@@ -1,1 +1,2 @@
 .vscode/
+# Utilizado para não marcar erro no vscode pois ele não reconhece o "include <LiquidCrystal.h>" que foi utilizado no código do arduino em C++
