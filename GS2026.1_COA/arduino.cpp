@@ -4,7 +4,7 @@
  *  UTILIZADO NO ARDUINO DENTRO DO TINKERCAD
  *  LINK DO PROJETO: https://www.tinkercad.com/things/hhbg2m4zzBh-sistema-iot-coa-by-lucas-neves?sharecode=nQLW0ARAjjmXLLUJx176xJBZ-ugm1uUvb0MJ4T7PW-k
  * ============================================================
- *  LCD pinos : RS=12, EN=11, D4=10, D5=9, D6=8, D7=7  (PADRÃO TINKERCAD)
+ *  LCD pinos : RS=12, EN=11, D4=10, D5=9, D6=8, D7=7 
  *  TMP36     : A0
  *  LDR       : A1
  *  Potenc.   : A2
